@@ -1,0 +1,45 @@
+<%- include("partials/header.ejs") %>
+
+        <div id="addForm">
+            <h2 id="addHeading">Enter your blog details</h2>
+            <form action="/submit" method="post" enctype="multipart/form-data">
+                <div id="authorDiv">
+                    <label for="author">Who is the Author?</label>
+                    <input type="text" id="author" name="author"/>
+                </div>
+
+                <div id="titleDiv">
+                    <label for="title">Enter the Title</label>
+                    <input type="text" id="title" name="title" required/>
+                </div>
+
+                <div id="genreDiv">
+                    <label for="genre">Select a Genre</label>
+                    <!-- <input type="text" id="genre" name="genre" placeholder="One word"/> -->
+                    <select id="genre" name="genre" required>
+                        <option value=""></option>
+                        <option value="Technology">Technology</option>
+                        <option value="Education">Education</option>
+                        <option value="Lifestyle">Lifestyle</option>
+                        <option value="Motivation">Motivation</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div id="imageDiv">
+                    <label for="image">Add a cover image?</label>
+                    <input type="file" id="image" name="image"/>
+                </div>
+
+                <div id="messageDiv">
+                    <label for="message">Type/Paste your post</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+
+                <a href="/"><button id="back" type="button" name="back">BACK</button></a>
+
+                <button id="forward" type="submit" name="post">POST</button>
+            </form>
+        </div>
+
+<%- include("partials/footer.ejs") %>

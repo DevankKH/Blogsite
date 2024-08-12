@@ -1,0 +1,41 @@
+<%- include("partials/header.ejs") %>
+
+    <div id="searchBar">
+        <form action="/search" method="post">
+            <!-- Search for specific article -->
+            <input type="text" id="blogSearch" name="blogSearch" placeholder="<%= search %>">
+            <button type="submit" id="iconSearch">
+                <i class="fa-solid fa-magnifying-glass fa-3x"></i>
+            </button>
+        </form>
+        <form action="/search" method="post">
+            <!-- Populate based on enter genres from blogs -->
+            <% for(let j=0; j<genre.length; j++) {%>
+                <button type="submit" id="<%= genre[j] %>Button" name="buttonSearch" value="<%= genre[j] %>"><%= genre[j] %></button>
+            <% } %>
+        </form>
+    </div>
+    
+    <div id="content">
+        <h2>Blogs</h2>
+        <form action="/add" method="post">
+            <button type="submit" id="add"><i class="fa-solid fa-plus fa-1x"></i> Add Blog</button>
+            <a href="/" class="<%= filter %>"><button id="clear" type="button" name="clear"><i class="fa-solid fa-x fa-xs"></i> Clear Filter</button></a>
+        </form>
+        <div id="articleHolder">
+            <!-- Populate based on amount of blogs added to an array containing JSON objects -->
+            <% for(let i=articles.length-1; i>=0; i--) {%>
+                <div class="card" id="card<%= i+1 %>">
+                    <img src="<%= articles[i].image %>" class="card-img-top" alt="Picture of <%= articles[i].genre %> for article">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= articles[i].title %></h5>
+                        <h6><%= articles[i].author %></h6>
+                        <p class="card-text"><%= articles[i].text.substring(0, 150) %>...</p>
+                        <a href="/article.ejs" class="btn btn-primary">Read full</a>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+
+<%- include("partials/footer.ejs") %>
