@@ -34,8 +34,9 @@ app.get("/", (req, res) => {
 });
 
 // Page used to show the relevant articles when clicked on preview card link
-app.get("/article.ejs", (req, res) => {
-    res.render("article.ejs");
+app.post("/article", (req, res) => {
+    let id = req.body.fullArticle - 1;
+    res.render("article.ejs", {article: blogs[id]});
 });
 
 // Search functionality when user searches for a blog, if search exists it will render a new page with searched articles

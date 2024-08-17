@@ -31,7 +31,9 @@
                         <h5 class="card-title"><%= articles[i].title %></h5>
                         <h6><%= articles[i].author %></h6>
                         <p class="card-text"><%= articles[i].text.substring(0, 150) %>...</p>
-                        <a href="/article.ejs" class="btn btn-primary">Read full</a>
+                        <form action="/article" method="post">
+                            <button type="submit" name="fullArticle" value="<%= articles[i].id %>">Read full</button>
+                        </form>
                     </div>
                 </div>
             <% } %>

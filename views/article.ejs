@@ -1,5 +1,19 @@
 <%- include("partials/header.ejs") %>
 
-    
+    <div id="articleContent">
+        <a href="/"><i class="fa-solid fa-arrow-right fa-2x"></i></a>
+
+        <div id="articleSections">
+            <div id="articleMain">
+                <h2><%= article.title %></h2>
+                <h3><%= article.author %></h3>
+                <p><%= article.text %></p>
+                <p><%= String(article.date).substring(4, 15) %></p>
+            </div>
+            <div id="articleSide">
+                <h3>Related Articles</h3>
+            </div>
+        </div>
+    </div>
 
 <%- include("partials/footer.ejs") %>
