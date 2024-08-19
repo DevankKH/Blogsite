@@ -33,6 +33,10 @@ app.get("/", (req, res) => {
     res.render("index.ejs", {articles: blogs, search: search_string, filter: hide, genre: genres});
 });
 
+app.get("/login", (req, res) => {
+    res.render("login.ejs");
+});
+
 // Page used to show the relevant articles when clicked on preview card link
 app.post("/article", (req, res) => {
     let id = req.body.fullArticle - 1;

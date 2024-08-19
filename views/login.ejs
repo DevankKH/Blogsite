@@ -1,0 +1,35 @@
+<%- include("partials/header.ejs") %>
+
+    <div id="loginContainer">
+        <img src="assets/Login.jpg"/>
+
+        <form id="login" action="/" method="get">
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username"/>
+
+            <label for="password">Password</label>
+            <input type="text" id="password" name="password"/>
+
+            <a href="/"><button id="back" type="button" name="back">BACK</button></a>
+            <button id="forward" type="submit" name="post">LOGIN</button>
+        </form>
+
+        <form id="signup" action="/" method="get">
+            <label for="newUsername">Enter Username</label>
+            <input type="text" id="newUsername" name="newUsername"/>
+
+            <label for="newEmail">Enter Email</label>
+            <input type="text" id="newEmail" name="newEmail"/>
+
+            <label for="newPassword">Enter Password</label>
+            <input type="text" id="newPassword" name="newPassword"/>
+
+            <label for="confirmPassword">Confirm Password</label>
+            <input type="text" id="confirmPassword" name="confirmPassword"/>
+
+            <a href="/"><button id="back" type="button" name="back">BACK</button></a>
+            <button id="forward" type="submit" name="post">SIGN-UP</button>
+        </form>
+    </div>
+
+<%- include("partials/footer.ejs") %>

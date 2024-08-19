@@ -15,6 +15,7 @@ body {
     flex-direction: column;
 }
 
+/*---------------------------------------------------------------*/
 /* Navigation Bar */
 nav {
     width: 100%;
@@ -80,6 +81,11 @@ nav ul li:hover:after {
     width: 100%;
 }
 
+/*---------------------------------------------------------------*/
+/* Login/Register */
+
+
+/*---------------------------------------------------------------*/
 /* Home */
 #searchBar {
     margin-top: 40px;
@@ -96,9 +102,12 @@ nav ul li:hover:after {
     height: 40px;
     width: 1000px;
     border-radius: 20px;
-    border: 2px solid #000F08;
     padding-left: 20px;
     font-size: 14pt;
+}
+
+#blogSearch:focus {
+    outline-color: #BB4430;
 }
 
 #searchbtn {
@@ -119,7 +128,7 @@ nav ul li:hover:after {
 
 #iconSearch:hover {
     cursor: pointer;
-    opacity: 50%;
+    color: #BB4430;
 }
 
 #searchBar form:nth-child(1) {
@@ -233,6 +242,7 @@ button[name="fullArticle"]:hover {
     cursor: pointer;
 }
 
+/*---------------------------------------------------------------*/
 /* Add blog page */
 #addForm {
     display: flex;
@@ -241,7 +251,7 @@ button[name="fullArticle"]:hover {
 }
 
 #addHeading {
-    margin-top: 160px;
+    margin-top: 60px;
     margin-left: 0px;
     margin-bottom: 10px;
     width: 894px;
@@ -356,6 +366,7 @@ textarea {
     align-self: center;
 }
 
+/*---------------------------------------------------------------*/
 /* Blogs Page */
 #articleContent {
     padding: 35px;
@@ -387,7 +398,7 @@ textarea {
     width: 80%;
     margin: auto;
     margin-bottom: 20px !important;
-    border: 2px solid #FFC857;
+    border: 4px solid #BB4430;
     border-radius: 20px;
 }
 
@@ -416,6 +427,7 @@ textarea {
     margin: 0px;
 }
 
+/*---------------------------------------------------------------*/
 /* Footer */
 footer {
     width: 100%;
@@ -431,3 +443,6 @@ footer span {
     padding-right: 20px;
     padding-bottom: 15px;
 }
+
+/*---------------------------------------------------------------*/
+/* Media Queries */
