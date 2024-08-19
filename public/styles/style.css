@@ -368,39 +368,52 @@ textarea {
 
 #articleContent a {
     color: #000F08;
+    width: 30px;
 }
 
 #articleContent a:hover {
     color: #BB4430;
 }
 
-#articleSections {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    column-gap: 30px;
-    background: white;
+#articleContent {
+    display: flex;
+    flex-direction: column;
     padding: 40px;
 }
 
-#articleSections h2 {
+#articleMain {
+    padding: 30px;
+    background: white;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 20px !important;
+    border: 2px solid #FFC857;
+    border-radius: 20px;
+}
+
+#comments {
+    padding: 30px;
+    background: white;
+    width: 80%;
+    margin: auto;
+}
+
+#articleMain h2 {
     margin: 0;
     margin-bottom: 5px;
 }
 
-#articleSections h3 {
+#articleMain h3, #comments h3 {
     margin: 0;
 }
 
-#articleSections p {
-    margin-bottom: 0;
+#text{
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
 
-#articleMain {
-    grid-column: 1/2;
-}
-
-#articleSide {
-    grid-column: 2/3;
+#date {
+    margin: 0px;
 }
 
 /* Footer */

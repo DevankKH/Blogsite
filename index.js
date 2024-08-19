@@ -36,6 +36,7 @@ app.get("/", (req, res) => {
 // Page used to show the relevant articles when clicked on preview card link
 app.post("/article", (req, res) => {
     let id = req.body.fullArticle - 1;
+
     res.render("article.ejs", {article: blogs[id]});
 });
 
