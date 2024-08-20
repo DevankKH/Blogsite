@@ -2,5 +2,23 @@
     <footer>
         <span>DBloggers</span>
     </footer>
+
+    <script>
+        const btnRight = document.querySelector("#switchSignup");
+        const btnLeft = document.querySelector("#switchLogin");
+        const image = document.querySelector("#moveImage");
+        btnRight.addEventListener("click", () => {
+            if(image.classList.contains("moveLeft")){
+                image.classList.remove("moveLeft");
+            }
+            image.classList.add("moveRight");
+        });
+        btnLeft.addEventListener("click", () => {
+            if(image.classList.contains("moveRight")){
+                image.classList.remove("moveRight");
+            }
+            image.classList.add("moveLeft");
+        });
+    </script>
 </body>
 </html>

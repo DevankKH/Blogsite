@@ -33,6 +33,10 @@ app.get("/", (req, res) => {
     res.render("index.ejs", {articles: blogs, search: search_string, filter: hide, genre: genres});
 });
 
+app.post("/", (req, res) => {
+    res.redirect("/");
+});
+
 app.get("/login", (req, res) => {
     res.render("login.ejs");
 });

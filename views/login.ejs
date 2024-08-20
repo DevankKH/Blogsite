@@ -1,35 +1,45 @@
 <%- include("partials/header.ejs") %>
 
     <div id="loginContainer">
-        <img src="assets/Login.jpg"/>
+        <div id="login">
+            <img id="moveImage" src="assets/Login.jpg"/>
 
-        <form id="login" action="/" method="get">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username"/>
+            <form id="loginSide" action="/" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required/>
 
-            <label for="password">Password</label>
-            <input type="text" id="password" name="password"/>
+                <label for="password">Password</label>
+                <input type="text" id="password" name="password" required/>
 
-            <a href="/"><button id="back" type="button" name="back">BACK</button></a>
-            <button id="forward" type="submit" name="post">LOGIN</button>
-        </form>
+                <div id="loginBtn">
+                    <a href="/"><button id="back" type="button" name="back">BACK</button></a>
+                    <button id="forward" type="submit" name="post">LOGIN</button>
+                </div>
 
-        <form id="signup" action="/" method="get">
-            <label for="newUsername">Enter Username</label>
-            <input type="text" id="newUsername" name="newUsername"/>
+                <button id="switchSignup" type="button" name="switchSignup">Signup Instead</button>
+            </form>
 
-            <label for="newEmail">Enter Email</label>
-            <input type="text" id="newEmail" name="newEmail"/>
+            <form id="signupSide" action="/" method="post">
+                <label for="newUsername">Enter Username</label>
+                <input type="text" id="newUsername" name="newUsername" required/>
 
-            <label for="newPassword">Enter Password</label>
-            <input type="text" id="newPassword" name="newPassword"/>
+                <label for="newEmail">Enter Email</label>
+                <input type="text" id="newEmail" name="newEmail" required/>
 
-            <label for="confirmPassword">Confirm Password</label>
-            <input type="text" id="confirmPassword" name="confirmPassword"/>
+                <label for="newPassword">Enter Password</label>
+                <input type="text" id="newPassword" name="newPassword" required/>
 
-            <a href="/"><button id="back" type="button" name="back">BACK</button></a>
-            <button id="forward" type="submit" name="post">SIGN-UP</button>
-        </form>
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="text" id="confirmPassword" name="confirmPassword" required/>
+
+                <div id="signupBtn">
+                    <a href="/"><button id="back" type="button" name="back">BACK</button></a>
+                    <button id="forward" type="submit" name="post">SIGN-UP</button>
+                </div>
+
+                <button id="switchLogin" type="button" name="switchLogin">Login Instead</button>
+            </form>
+        </div>
     </div>
 
 <%- include("partials/footer.ejs") %>
