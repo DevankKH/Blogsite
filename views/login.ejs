@@ -4,7 +4,7 @@
         <div id="login">
             <img id="moveImage" src="assets/Login.jpg"/>
 
-            <form id="loginSide" action="/" method="post">
+            <form id="loginSide" action="/enter" method="post">
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" required/>
 
@@ -13,13 +13,13 @@
 
                 <div id="loginBtn">
                     <a href="/"><button id="back" type="button" name="back">BACK</button></a>
-                    <button id="forward" type="submit" name="post">LOGIN</button>
+                    <button id="forward" type="submit" name="post" value="post">LOGIN</button>
                 </div>
 
                 <button id="switchSignup" type="button" name="switchSignup">Signup Instead</button>
             </form>
 
-            <form id="signupSide" action="/" method="post">
+            <form id="signupSide" action="/enter" method="post">
                 <label for="newUsername">Enter Username</label>
                 <input type="text" id="newUsername" name="newUsername" required/>
 
@@ -34,7 +34,7 @@
 
                 <div id="signupBtn">
                     <a href="/"><button id="back" type="button" name="back">BACK</button></a>
-                    <button id="forward" type="submit" name="post">SIGN-UP</button>
+                    <button id="forward" type="submit" name="signup" value="signup">SIGN-UP</button>
                 </div>
 
                 <button id="switchLogin" type="button" name="switchLogin">Login Instead</button>

@@ -19,6 +19,13 @@ const blogs = [
         "date": new Date(),
     }
 ];
+const login_details = [
+    {
+        "username": "Devank",
+        "email": "devank@gmail.com",
+        "password": "test1",
+    }
+];
 
 // Enable body parser
 app.use(bodyParser.urlencoded({extended: true}));
@@ -33,7 +40,22 @@ app.get("/", (req, res) => {
     res.render("index.ejs", {articles: blogs, search: search_string, filter: hide, genre: genres});
 });
 
-app.post("/", (req, res) => {
+app.post("/enter", (req, res) => {
+    if(req.body.post != "") {
+        if(login_details.some(element => element['username'] === req.body.username) && login_details.some(element => element['password'] === req.body.password)) {
+            console.log("User exists, allow");
+        }
+        else {
+            console.log("User not found");
+        }
+    } else if(req.body.signup != "") {
+        console.log(req.body);
+        let new_user = {
+            "username": req.body.newUsername,
+            "email": req.body.newEmail,
+            "password": req.body.newPassword,
+        };
+    }
     res.redirect("/");
 });
 
